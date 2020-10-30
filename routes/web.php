@@ -2,9 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/todolist',function(){
-	return view('todolist.index');
-});
+Route::get('/todolist','ToDoController@index');
 
 /*
 |--------------------------------------------------------------------------
