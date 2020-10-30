@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/todolist',function(){
+	return view('todolist.index');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
