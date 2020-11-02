@@ -14,7 +14,7 @@ class ToDoController extends Controller
     {
     	$todos= Todo::all();
     	
-    	return view('todolist.index')->with(['todos'=>$todos]);
+    	return view('todolist.index',compact('todos'));
     }
 
      public function create()
@@ -48,9 +48,10 @@ class ToDoController extends Controller
      	return redirect()->back()->with ('message', 'Task Created Succesfully');
      }
 
-    public function edit()
+    public function edit(ToDo $todo)
     {
-    	return view('todolist.edit');
+        //$todo= ToDo::find($id);
+    	return view('todolist.edit',compact('todo'));
     }
 
 

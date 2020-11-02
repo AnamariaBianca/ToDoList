@@ -1,11 +1,18 @@
 @extends('todolist.layout')
 @section('content')
-        <h1 class="text-2xl">To do list</h1>
+<div>
+	        <h1 class="text-2xl">To do list</h1>
+	        <a href="/todolist/create" class="mx-5 py-1 px-1 bg-blue-400 cursor-pointer rounded text-white"> Create new task</a>
+
+</div>
 		        <ul>
 			@foreach($todos as $todo)
 
-			<li>
-				{{$todo->title}}
+			<li class="mx-5 py-2 px-2">
+				<p> {{$todo->title}}
+				<a href="{{'/todolist/'.$todo->id.'/edit'}}" class="mx-5 py-1 px-1 bg-yellow-400 cursor-pointer rounded text-white">Edit</a>
+				</p>
+				
 
 			</li>
 			@endforeach
