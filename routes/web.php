@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/todolist','ToDoController@index');
-Route::get('/create','ToDoController@create');
-Route::get('/edit','ToDoController@edit');
-Route::post('/create','ToDoController@store');
+Route::get('/todolist/create','ToDoController@create');
+Route::get('/todolist/edit','ToDoController@edit');
+Route::post('/todolist/create','ToDoController@store');
 
 
 
