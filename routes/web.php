@@ -7,10 +7,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/todolist','ToDoController@index');
+
 Route::get('/todolist/create','ToDoController@create');
+
 Route::get('/todolist/{todo}/edit','ToDoController@edit');
+
 Route::post('/todolist/create','ToDoController@store');
 
+Route::patch('/todolist/{todo}/update','ToDoController@update')->name('todo.update');
 
 
 /*

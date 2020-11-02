@@ -50,8 +50,15 @@ class ToDoController extends Controller
 
     public function edit(ToDo $todo)
     {
-        //$todo= ToDo::find($id);
+         
     	return view('todolist.edit',compact('todo'));
+    }
+
+
+    public function update(Request $request, ToDo $todo)
+    {
+        $todo->update(['title'=> $request->title]);
+        return redirect()->back()->with('message','Updated');
     }
 
 
