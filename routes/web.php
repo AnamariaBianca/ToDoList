@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/todolist','ToDoController@index');
 Route::get('/create','ToDoController@create');
 Route::get('/edit','ToDoController@edit');
+Route::post('/create','ToDoController@store');
 
 
 
