@@ -27,4 +27,11 @@ class TodoCreateRequest extends FormRequest
             'title'=>'required|max:255',
         ];
     }
+
+    public function messages(){
+        return[
+            'title.max'=> 'Task title should not be greater than 255 chars.',
+
+        ];
+    }
 }

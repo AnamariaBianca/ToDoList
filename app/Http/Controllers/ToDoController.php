@@ -41,7 +41,7 @@ class ToDoController extends Controller
      	//  	return redirect()->back()
      	//  	->withErrors($validator)
      	//  	->withInput();
-    	 // }
+    	 // } ---------------NU MAI AVEM NEVOIE DE PARTEA ASTA
      	ToDo::create($request->all());
      	return redirect()->back()->with ('message', 'Task Created Succesfully');
      }
