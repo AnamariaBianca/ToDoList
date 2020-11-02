@@ -1,19 +1,18 @@
-To Do List
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Laravel Quickstart - Basic</title>
+@extends('todolist.layout')
+@section('content')
+        <h1 class="text-2xl">To do list</h1>
+		        <ul>
+			@foreach($todos as $todo)
 
-        <!-- CSS And JavaScript -->
-    </head>
+			<li>
+				{{$todo->title}}
 
-    <body>
-        <div class="container">
-            <nav class="navbar navbar-default">
-                <!-- Navbar Contents -->
-            </nav>
-        </div>
+			</li>
+			@endforeach
+		</ul>
+@endsection
 
-        @yield('content')
-    </body>
-</html>
+
+
+
+
