@@ -10,4 +10,14 @@ class ToDoController extends Controller
     {
     	return view('todolist.index');
     }
+
+     public function create()
+    {
+    	return view('todolist.create');
+    }
+
+    public function edit()
+    {
+    	return view('todolist.edit');
+    }
 }

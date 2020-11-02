@@ -7,14 +7,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/todolist','ToDoController@index');
+Route::get('/create','ToDoController@create');
+Route::get('/edit','ToDoController@edit');
 
-Route::post('/todo', function (Request $request) {
-    //
-});
 
-Route::delete('/todo/{id}', function ($id) {
-    //
-});
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
