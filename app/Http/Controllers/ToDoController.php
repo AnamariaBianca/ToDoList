@@ -23,6 +23,7 @@ class ToDoController extends Controller
 
     public function store(Request $request)
     {
-    	ToDo::create($request->all());
+    	ToDoController::create($request->all());
+    	return redirect()->back()->with ('message', 'Todo Created Succesfully');
     }
 }
