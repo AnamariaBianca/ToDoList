@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/todolist','ToDoController@index');
+Route::get('/todolist','ToDoController@index')->name('todo.index');
 
 Route::get('/todolist/create','ToDoController@create');
 

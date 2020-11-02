@@ -58,7 +58,7 @@ class ToDoController extends Controller
     public function update(Request $request, ToDo $todo)
     {
         $todo->update(['title'=> $request->title]);
-        return redirect()->back()->with('message','Updated');
+        return redirect(route('todo.index'))->with('message','Updated');
     }
 
 
