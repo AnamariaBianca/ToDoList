@@ -21,7 +21,8 @@ class ToDoController extends Controller
     	return view('todolist.edit');
     }
 
-    public function store(Request $request){
-    	dd($request->all());
+    public function store(Request $request)
+    {
+    	ToDo::create($request->all());
     }
 }
