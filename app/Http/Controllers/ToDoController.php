@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ToDo;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\TodoCreateRequest;
+
 
 class ToDoController extends Controller
 {
@@ -17,7 +19,7 @@ class ToDoController extends Controller
     {
     	return view('todolist.create');
     }
-      public function store(Request $request)
+      public function store(TodoCreateRequest $request)
 
      {
 
@@ -28,18 +30,18 @@ class ToDoController extends Controller
     		// 'title'=>'required|max:255',
 
     	 //  ]);
-     	 $rules=[
-     	 	'title'=>'required|max:255',
-     	 ];
-     	 $messages=[
-     	 	'Title.max'=>'Task title should not be greater than 255 chars.',
-     	 ];
-     	 $validator=Validator::make($request->all(),$rules,$messages);
-     	 if($validator->fails()){
-     	 	return redirect()->back()
-     	 	->withErrors($validator)
-     	 	->withInput();
-    	 }
+     	//  $rules=[
+     	//  	'title'=>'required|max:255',
+     	//  ];
+     	//  $messages=[
+     	//  	'Title.max'=>'Task title should not be greater than 255 chars.',
+     	//  ];
+     	//  $validator=Validator::make($request->all(),$rules,$messages);
+     	//  if($validator->fails()){
+     	//  	return redirect()->back()
+     	//  	->withErrors($validator)
+     	//  	->withInput();
+    	 // }
      	ToDo::create($request->all());
      	return redirect()->back()->with ('message', 'Task Created Succesfully');
      }
