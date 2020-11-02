@@ -18,7 +18,13 @@ class ToDoController extends Controller
     }
      public function store(Request $request)
     {
-    	
+    	/*if(!$request->title){
+    		return redirect()->back()->with('error','Insert task!');
+    	}*/
+    	$request->validate([
+    		'title'=>'required',
+
+    	]);
     	ToDo::create($request->all());
     	return redirect()->back()->with ('message', 'Task Created Succesfully');
     }
