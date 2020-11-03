@@ -61,5 +61,24 @@ class ToDoController extends Controller
         return redirect(route('todo.index'))->with('message','Updated');
     }
 
+    public function complete(Todo $todo)
+    {
+        $todo->update(['completed'=>true]);
+        return redirect()->back()->with('message', 'Task completed');
+    }
+
+    public function incomplete(Todo $todo)
+    {
+        $todo->update(['completed'=>false]);
+        return redirect()->back()->with('message', 'Task incompleted');
+    }
+
+
+    public function delete(Todo $todo)
+    {
+        $todo->delete();
+        return redirect()->back()->with('message', 'Task deleted');
+    }
+
 
 }

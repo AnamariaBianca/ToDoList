@@ -16,6 +16,12 @@ Route::post('/todolist/create','ToDoController@store');
 
 Route::patch('/todolist/{todo}/update','ToDoController@update')->name('todo.update');
 
+Route::put('/todolist/{todo}/complete','ToDoController@complete')->name('todo.complete');
+
+Route::delete('/todolist/{todo}/incomplete','ToDoController@incomplete')->name('todo.incomplete');
+
+Route::delete('/todolist/{todo}/delete','ToDoController@delete')->name('todo.delete');
+
 
 /*
 |--------------------------------------------------------------------------
