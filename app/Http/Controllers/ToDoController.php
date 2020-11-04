@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\ToDo;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Requests\TodoCreateRequest;
+use Carbon\Carbon;
 
 
 class ToDoController extends Controller
@@ -15,6 +16,7 @@ class ToDoController extends Controller
     	$todos= Todo::all();
     	
     	return view('todolist.index',compact('todos'));
+
     }
 
      public function create()
@@ -78,6 +80,12 @@ class ToDoController extends Controller
     {
         $todo->delete();
         return redirect()->back()->with('message', 'Task deleted');
+    } 
+
+
+    public function time()
+    {
+        echo Carbon::create(2020,12,1);
     }
 
 
