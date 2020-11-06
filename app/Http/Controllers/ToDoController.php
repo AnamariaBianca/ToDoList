@@ -26,6 +26,7 @@ class ToDoController extends Controller
       public function store(TodoCreateRequest $request)
 
      {
+        //dd($request->all());
 
     	/*if(!$request->title){
     		return redirect()->back()->with('error','Insert task!');
@@ -46,9 +47,21 @@ class ToDoController extends Controller
      	//  	->withErrors($validator)
      	//  	->withInput();
     	 // } ---------------NU MAI AVEM NEVOIE DE PARTEA ASTA
+
+        
+           
      	ToDo::create($request->all());
+// $request->validate([
+            
+//             'due_date'=>'required|date_format:Y-m-d',]);
+        
+
+        
      	return redirect()->back()->with ('message', 'Task Created Succesfully');
+       
      }
+
+     
 
     public function edit(ToDo $todo)
     {
@@ -85,7 +98,7 @@ class ToDoController extends Controller
 
     public function time()
     {
-        echo Carbon::create(2020,12,1);
+        return view('todolist.time',compact('todo'));
     }
 
 

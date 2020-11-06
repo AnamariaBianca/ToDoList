@@ -20,9 +20,11 @@
 				@else
 				<p> {{$todo->title}}</p>
 				@endif 
+
+			</p>
 				<div>
 
-					<a href="{{'/todolist/time'}}" class="text-white-400 cursor-pointer  text-black"> Due date -><span class="fas fa-calendar px-2"></a>
+					
 					
 					<a href="{{'/todolist/'.$todo->id.'/edit'}}" class="text-yellow-400 cursor-pointer  text-white"><span class="fas fa-edit px-2"></a>
 
@@ -37,9 +39,13 @@
 						@csrf
 						@method('delete')
 					</form>
+
+					
+
+					
 				</div>
 				
-				
+				<!-- <a href="{{'/todolist/time'}}" class="text-white-400 cursor-pointer  text-black"> Due date -><span class="fas fa-calendar px-2"></a> -->
 				
 
 			</li>
