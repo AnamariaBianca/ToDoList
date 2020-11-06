@@ -8,10 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ToDo extends Model
 {
-    protected $fillable=['title','completed'];
-    protected $dates=[
-    	'due_date',
-   	];
+    protected $fillable=['title','completed','due_date'];
+    
 
 
     public function setDueDateAttribute($date){
