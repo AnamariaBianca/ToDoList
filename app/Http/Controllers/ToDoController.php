@@ -73,6 +73,7 @@ class ToDoController extends Controller
     public function update(TodoCreateRequest $request, ToDo $todo)
     {
         $todo->update(['title'=> $request->title]);
+        $todo->update(['due_date'=> $request->due_date]);
         return redirect(route('todo.index'))->with('message','Updated');
     }
 
@@ -96,10 +97,10 @@ class ToDoController extends Controller
     } 
 
 
-    public function time()
-    {
-        return view('todolist.time',compact('todo'));
-    }
+    // public function time()
+    // {
+    //     return view('todolist.time',compact('todo'));
+    // }
 
 
 }

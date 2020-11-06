@@ -9,6 +9,8 @@
             @csrf
             @method('patch')
             <input type="text" name="title" value={{$todo->title}} class="py-2 px-2 border rounded"/>
+            <input type="date" name="due_date" value=
+            {{$todo->due_date}} class="py-2 px-2 border rounded"/>
             <input type="submit" value="Update" class ="p-1 border rounded-lg"/>
         </form>
 

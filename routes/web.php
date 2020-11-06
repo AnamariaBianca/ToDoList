@@ -24,7 +24,7 @@ Route::delete('/todolist/{todo}/incomplete','ToDoController@incomplete')->name('
 
 Route::delete('/todolist/{todo}/delete','ToDoController@delete')->name('todo.delete');
 
-Route::get('/todolist/{todo}/time','ToDoController@time')->name('todo.time');
+//Route::get('/todolist/{todo}/time','ToDoController@time')->name('todo.time');
 
 
 /*

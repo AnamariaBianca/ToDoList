@@ -2,7 +2,7 @@
 @section('content')
 <div class="flex justify-center border-b pb-4">
 	        <h1 class="text-2xl">To do list</h1>
-	        <a href="/todolist/create" class="mx-5 py-1 px-1 bg-blue-400 cursor-pointer rounded text-white"> Create new task</a>
+	        <a href="/todolist/create" class="mx-10 py-1 px-1 bg-blue-400 cursor-pointer rounded text-white"> Create new task</a>
 
 </div>
 		        <ul class="my-5">
@@ -21,7 +21,7 @@
 				<p> {{$todo->title}}</p>
 				@endif 
 
-			</p>
+				<p class="mx-5 bg-blue-100 rounded text-black">Due date: {{$todo->due_date}}</p>
 				<div>
 
 					
@@ -40,7 +40,7 @@
 						@method('delete')
 					</form>
 
-					
+
 
 					
 				</div>

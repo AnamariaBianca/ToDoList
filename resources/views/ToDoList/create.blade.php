@@ -6,7 +6,7 @@
             @csrf
             <input type="text" name="title" class="py-2 px-2 border rounded"/>
             <input type="submit" value="Create" class ="p-1 border rounded-lg"/>
-            <div class="form-group">
+            <div class="mx-5 py-2 px-2 form-group">
         	<label>Due date</label>
         	<input type="date" name="due_date" class="form-control border rounded">
         </div>
