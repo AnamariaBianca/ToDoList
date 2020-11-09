@@ -5,10 +5,19 @@
 	        <a href="/todolist/create" class="mx-10 py-1 px-1 bg-blue-400 cursor-pointer rounded text-white"> Create new task</a>
 
 </div>
-		
+    
+<p>
+                        
+{{ $completed->count() }} Incompleted
+                        
+</p>
+    
+ 
+  
 
 		        <ul class="my-5">
 		        	<x-alert/>
+
 			@foreach($todos as $todo)
 
 
@@ -59,7 +68,6 @@
 					
 				</div>
 				
-				<!-- <a href="{{'/todolist/time'}}" class="text-white-400 cursor-pointer  text-black"> Due date -><span class="fas fa-calendar px-2"></a> -->
 				
 
 			</li>
