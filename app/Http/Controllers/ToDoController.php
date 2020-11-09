@@ -96,11 +96,12 @@ class ToDoController extends Controller
         return redirect()->back()->with('message', 'Task deleted');
     } 
 
-
-    // public function time()
-    // {
-    //     return view('todolist.time',compact('todo'));
-    // }
+ // public static function print(Todo $todo)
+ //    {
+    
+ //        return redirect()->back()->with('message', 'You have:' .count($todo->due_date > Carbon::now()));
+ //    }
+   
 
 
 }

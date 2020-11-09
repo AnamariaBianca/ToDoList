@@ -5,9 +5,13 @@
 	        <a href="/todolist/create" class="mx-10 py-1 px-1 bg-blue-400 cursor-pointer rounded text-white"> Create new task</a>
 
 </div>
+		
+
 		        <ul class="my-5">
 		        	<x-alert/>
 			@foreach($todos as $todo)
+
+
 
 			<li class="flex justify-between p-2">
 				<div>
@@ -21,7 +25,17 @@
 				<p> {{$todo->title}}</p>
 				@endif 
 
-				<p class="mx-5 bg-blue-100 rounded text-black">Due date: {{$todo->due_date}}</p>
+				
+				
+  				 @if ($todo->due_date > Carbon\Carbon::now())
+
+  				 <p class="mx-5 rounded">Due date: {{$todo->due_date}}</p>
+  				 @else
+  				 <p style="color:#FF0000";>Due date: {{$todo->due_date}}</p>
+  				 @endif
+				
+				
+				
 				<div>
 
 					
