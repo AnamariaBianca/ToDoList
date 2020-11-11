@@ -6,11 +6,11 @@
 
 </div>
     
-<p>
+<div>
                         
 {{ $completed->count() }} Incompleted
                         
-</p>
+</div>
     
  
   

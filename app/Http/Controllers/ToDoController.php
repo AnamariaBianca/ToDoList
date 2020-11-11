@@ -100,8 +100,8 @@ class ToDoController extends Controller
     {
        
       $todos= Todo::all();
-      $completed = $todos->where('completed', 0)->get();
-        return view('todolist.index',compact('completed'));
+      $completed = $todos->where('completed', 0);
+        return view('todolist.index',compact('todos','completed'));
 
     }
 
