@@ -13,10 +13,10 @@ class ToDoController extends Controller
 {
     public function index()
     {
-    	$todos= Todo::all();
-    	
-    	return view('todolist.index',compact('todos'));
-
+        $todos= Todo::all();
+        $completed = $todos->where('completed', 0);
+          return view('todolist.index',compact('todos','completed'));
+  
     }
 
      public function create()
@@ -96,14 +96,7 @@ class ToDoController extends Controller
         return redirect()->back()->with('message', 'Task deleted');
     } 
 
-   public function get()
-    {
-       
-      $todos= Todo::all();
-      $completed = $todos->where('completed', 0);
-        return view('todolist.index',compact('todos','completed'));
-
-    }
+  
 
 
 }

@@ -18,7 +18,7 @@ class CreateToDosTable extends Migration
             $table->id();
             $table->string('title');
             $table->boolean('completed')->default(false);
-            $table->date('due_date')->default(Carbon::now());
+            $table->date('due_date');
             $table->timestamps();
             
 
